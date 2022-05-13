@@ -1,0 +1,132 @@
+:root {
+  --head-max-width: 800px;
+  --head-padding: 25px;
+  --head-icon-scale: 1.15;
+}
+
+.head {
+  color:#34495e;
+  background-color:#dfe5f3;
+  height: 180px;
+  position: relative;
+}
+
+.head-title * {
+  max-width: calc(var(--head-max-width) - var(--head-padding));
+  margin: 0 auto 0 auto;
+  padding-left: var(--head-padding);
+}
+
+.head-title h1 {
+  padding-top: 22px;
+  font-size: 40px;
+}
+
+.head-title h2 {
+  padding-top: 6px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.head-bar {
+  color:#ffffffce;
+  text-shadow: 2px 4px 2px #1541a8;
+  background-color:#6389e1;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.head-bar-fg {
+  height: 100%;
+  max-width: var(--head-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  vertical-align: middle;
+}
+
+.head-bar-fg div {
+  display: flex;
+  align-items: center;
+  height: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.head-bar-fg-icons {
+  margin-left: auto;
+}
+
+.head-bar-fg-icons svg {
+  margin-right: calc(var(--head-padding) * var(--head-icon-scale));
+  transform-origin: 10px;
+  filter: drop-shadow(0px 2px 0px #4d70c0);
+  height: 1.5em;
+  width: 1.5em;
+  transform: scale(var(--head-icon-scale));
+  fill: currentColor;
+  transition: all 0.25s;
+}
+
+.head-bar-fg-icons svg:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0px 3px 3px #1541a8);
+  cursor: pointer;
+}
+
+.head-bar-fg-items * {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-left: var(--head-padding);
+  transition: all 0.25s;
+}
+
+.head-bar-fg-items--low {
+  padding-bottom: 0px;
+}
+
+.head-bar-fg-items--high,
+.head-bar-fg-items h3:hover {
+  color:#ffffff;
+  text-shadow: none;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+hr {
+  position: absolute;
+  height: 1px;
+  width: 46px;
+  background-color:white;
+  border: none;
+  transition: .25s ease-in-out;
+  bottom: 0px;
+  margin-bottom: 12px;
+  opacity: 1;
+}
+
+.head-bar-fg-items h3:hover ~ hr {
+  opacity: 0.4;
+}
+
+.head-bar-fg-items--Home {
+  margin-left: calc(var(--head-padding));
+  width: 51px;
+}
+
+.head-bar-fg-items--About {
+  margin-left: calc(2 * var(--head-padding) + 50px);
+  width: 51px;
+}
+
+.head-bar-fg-items--Algorithms {
+  margin-left: calc(3 * var(--head-padding) + 100px);
+  width: 90px;
+}
+
+.head-bar-fg-items:hover .head-bar-fg-items--high:not(:hover) {
+  padding-bottom: 0px;
+  color:#ffffffce;
+}
